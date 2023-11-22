@@ -90,4 +90,7 @@ resource "aws_instance" "controller" {
     Name = "controller"
     Nginx = "nginx experience ${random_id.random-string.dec}"
   }
+   metadata_options {
+     http_tokens = "required"
+   }
 }
